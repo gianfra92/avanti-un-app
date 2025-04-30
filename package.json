@@ -1,5 +1,5 @@
 {
-  "name": "avanti-un-altro",
+  "name": "avanti-un-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:AvantiUnAltro": "node dist/avanti-un-altro/server/server.mjs"
+    "serve:ssr:AvantiUnApp": "node dist/avanti-un-app/server/server.mjs"
   },
   "private": true,
   "dependencies": {
