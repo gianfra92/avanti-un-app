@@ -52,6 +52,24 @@
               ],
               "outputHashing": "all"
             },
+            "mobile": {
+              "outputPath": "dist-mobile/avanti-un-app",
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all",
+              "ssr": false,
+              "prerender": false
+            },
             "development": {
               "optimization": false,
               "extractLicenses": false,
