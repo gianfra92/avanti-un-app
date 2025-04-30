@@ -1,0 +1,22 @@
+<div class="min-h-screen bg-sky-200 flex flex-col items-center">
+  <!-- Intestazione con immagine -->
+  <header class="w-full p-4 flex justify-center shadow-md bg-sky-300">
+    <img src="logo.jpg" alt="Titolo App" class="h-16 md:h-20 object-contain" />
+  </header>
+
+  <!-- Contenuto principale con i pulsanti -->
+  <main class="flex flex-col items-center justify-center flex-grow p-4 space-y-4 w-full">
+    <div *ngFor="let sound of sounds; let i = index" class="w-full max-w-xs">
+      <button
+        class="w-full py-3 text-white rounded-2xl shadow-lg transition duration-200 ease-in-out text-lg font-semibold active:scale-95 flex items-center justify-center"
+        [ngClass]="{
+          'bg-green-500 hover:bg-green-600': !isPlaying[i],
+          'bg-red-500 hover:bg-red-600': isPlaying[i]
+        }"
+        (click)="togglePlay(i)"
+      >
+      {{ isPlaying[i] ? 'Stop ' + soundTitles[i].title  : 'Play ' + soundTitles[i].title }}
+    </button>
+  </div>
+</main>
+</div>
